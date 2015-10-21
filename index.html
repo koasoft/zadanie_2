@@ -22,7 +22,37 @@
 
 		$(document).ready(function()
 		{
-
+			var window_width = $(window).width();
+			
+			var total_width = 0;
+			
+			$('.right').css('width', $('.content').width() - $('.left').width() + "px");
+			$('canvas').attr('width', $('.right').width() + "px");
+			
+			
+			total_width = 5000; 
+			$('.content').css('width', total_width + $('.left').width() + "px");
+			$('.right').css('width', total_width + "px");
+			$('canvas').attr('width', total_width + "px");
+			
+			var id_1 = document.getElementById("canvas_A_1");
+			
+			var content_A_1 = id_1.getContext("2d");
+			
+			content_A_1.fillStyle = "#49b950";
+			content_A_1.fillRect(0,0,400,50);
+			content_A_1.fillStyle = "#fff";
+			content_A_1.font = "30px Arial";
+			content_A_1.fillText("Jan Kowalski",120,35);
+			
+			content_A_1.fillStyle = "#49b950";
+			content_A_1.fillRect(500,0,300,50);
+			content_A_1.fillStyle = "#fff";
+			content_A_1.font = "30px Arial";
+			content_A_1.fillText("Adam Nowak",570,35);
+			
+			
+			
 			
 		}); //koniec ready
 
@@ -67,13 +97,23 @@
             
             	<div class="left">
                 
-                	<div class="object">Fiat Panda</div>
+                	<div class="object" id="A_1">Fiat Panda</div>
+                    <div class="object" id="A_2">Fiat Panda</div>
+                    <div class="object" id="A_3">Fiat Panda</div>
+                    <div class="object" id="A_4">Fiat Panda</div>
+                    <div class="object" id="A_5">Fiat Panda</div>
+                    <div class="object" id="A_6">Fiat Panda</div>
                 
                 </div>
                 
                 <div class="right">
                 
-                	<div class="time"></div>
+                	<div class="time" id="time_A_1"><canvas id="canvas_A_1" width="100px" height="50px"></canvas></div>
+                    <div class="time" id="time_A_2"><canvas id="canvas_A_2" width="100px" height="50px"></canvas></div>
+                    <div class="time" id="time_A_3"><canvas id="canvas_A_3" width="100px" height="50px"></canvas></div>
+                    <div class="time" id="time_A_4"><canvas id="canvas_A_4" width="100px" height="50px"></canvas></div>
+                    <div class="time" id="time_A_5"><canvas id="canvas_A_5" width="100px" height="50px"></canvas></div>
+                    <div class="time" id="time_A_6"><canvas id="canvas_A_6" width="100px" height="50px"></canvas></div>
                 
                 </div>
             

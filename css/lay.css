@@ -1,5 +1,5 @@
 .container-fluid {
-  width: 100%;
+  min-width: 100%;
   margin: 0px;
   padding: 0px; }
   .container-fluid .row {
@@ -11,6 +11,7 @@
       .container-fluid .row .col-md-12 header {
         float: left;
         width: 100%;
+        height: 100px;
         background-color: #fff; }
         .container-fluid .row .col-md-12 header h1 {
           float: left;
@@ -43,6 +44,7 @@
       .container-fluid .row .col-md-12 h2 {
         float: left;
         width: 100%;
+        height: 30px;
         padding-left: 25px;
         margin-bottom: 0px;
         font-family: Verdana, Geneva, sans-serif;
@@ -53,7 +55,7 @@
         box-sizing: border-box; }
       .container-fluid .row .col-md-12 .content {
         float: left;
-        width: 100%; }
+        min-width: 100%; }
         .container-fluid .row .col-md-12 .content .left {
           float: left;
           width: 300px; }
@@ -70,8 +72,13 @@
             border-right: 1px solid #dadada;
             box-sizing: border-box; }
         .container-fluid .row .col-md-12 .content .right {
-          float: left; }
+          float: left;
+          position: absolute;
+          z-index: -1;
+          margin-left: 300px; }
           .container-fluid .row .col-md-12 .content .right .time {
+            margin: 0px;
+            padding: 0px;
             float: left;
             width: 100%;
             height: 50px;
