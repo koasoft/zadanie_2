@@ -30,7 +30,7 @@
 			$('canvas').attr('width', $('.right').width() + "px");
 			
 			
-			total_width = 5000; 
+			total_width = 5100; 
 			$('.content').css('width', total_width + $('.left').width() + "px");
 			$('.right').css('width', total_width + "px");
 			$('canvas').attr('width', total_width + "px");
@@ -188,6 +188,32 @@
 			content_A_6.fillText("Andrzej Spokojny",4600,35);
 			
 			
+			
+			
+			$('#prev').click(function()
+			{
+				var margin_left = $('.right').css('margin-left').replace("px", "");
+				
+				if(margin_left < 300) 
+				{
+					$('.right').css('margin-left', (Number(margin_left) + 200) + "px");
+				}
+				
+				return false;
+			});
+			
+			
+			$('#next').click(function()
+			{
+				var margin_left = $('.right').css('margin-left').replace("px", "");
+				
+				if(margin_left > -3000) 
+				{
+					$('.right').css('margin-left', (margin_left - 200) + "px");
+				}
+				
+				return false;
+			});
 			
 			
 		}); //koniec ready
