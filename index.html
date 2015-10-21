@@ -216,6 +216,20 @@
 			});
 			
 			
+			$(document).keypress(function(e)
+		    {
+				if(e.which == 46 || e.which == 54 || e.which == 56) 
+				{
+					$('#next').click();
+				}
+				
+				else if(e.which == 44 || e.which == 50 || e.which == 52) 
+				{
+					$('#prev').click();
+				}
+			});
+			
+			
 		}); //koniec ready
 
 	</script>
