@@ -1,0 +1,131 @@
+
+$default-font: Verdana, Geneva, sans-serif;
+
+
+@mixin reset_margin_and_padding
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid
+{
+    width: 100%;
+    
+    @include reset_margin_and_padding;
+    
+    .row
+    {
+        @include reset_margin_and_padding;
+        
+        .col-md-12
+        {
+            @include reset_margin_and_padding;
+            
+            header
+            {
+                float: left;
+                width: 100%;
+                background-color: #fff;
+
+                h1
+                {
+                    float: left;
+                    height: 40px;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    margin-left: 25px;
+                    font-family: $default-font;
+                    font-size: 40px;
+                    line-height: 40px;
+                    color: #000;
+                }
+
+                nav
+                {
+                    float: right;
+                    height: 60px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    margin-right: 25px;
+
+                    a#prev
+                    {
+                        float: left;
+                        width: 70px;
+                        height: 60px;
+                        background-image: url(../img/prev.png);
+                        background-repeat: no-repeat;
+                    }
+
+                    a#next
+                    {
+                        float: left;
+                        width: 70px;
+                        height: 60px;
+                        background-image: url(../img/next.png);
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            
+            
+            h2
+            {
+                float: left;
+                width: 100%;
+                padding-left: 25px;
+                margin-bottom: 0px;
+                font-family: $default-font;
+                font-size: 20px;
+                line-height: 30px;
+                color: #000;
+                background-color: #e5e5e5;
+                box-sizing: border-box;
+            }
+            
+            
+            .content
+            {
+                float: left;
+                width: 100%;
+                
+                .left
+                {
+                    float: left;
+                    width: 300px;
+                    
+                    .object
+                    {
+                        float: left;
+                        width: 100%;
+                        height: 50px;
+                        padding-left: 10px;
+                        font-family: $default-font;
+                        font-size: 20px;
+                        line-height: 50px;
+                        background-color: #fafafa;
+                        border-bottom: 1px solid #dadada;
+                        border-right: 1px solid #dadada;
+                        box-sizing: border-box;
+                    }
+                }
+                
+                .right
+                {
+                    float: left;
+                    
+                    .time
+                    {
+                        float: left;
+                        width: 100%;
+                        height: 50px;
+                        background-color: #fafafa;
+                        border-bottom: 1px solid #dadada;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+}
