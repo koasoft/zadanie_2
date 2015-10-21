@@ -26,16 +26,27 @@
 			
 			var total_width = 0;
 			
+			//Ustawianie rozmiarów domyślnych 
 			$('.right').css('width', $('.content').width() - $('.left').width() + "px");
 			$('canvas').attr('width', $('.right').width() + "px");
 			
 			
+			/*
+			Ustawienie szerokości pojemnika na przykładową wartość. 
+			W prawdziwym systemie, zostałyby tutaj wykonane obliczenia i zapis danych do tablic. 
+			Faktyczna szerokość zostałaby ustalona na podstawie ilości danych. 
+			W tym przypadku szerokość jest tylko przykładówa. 
+			*/
 			total_width = 5100; 
 			$('.content').css('width', total_width + $('.left').width() + "px");
 			$('.right').css('width', total_width + "px");
 			$('canvas').attr('width', total_width + "px");
 			
 			
+			/*
+			Uzupełnienie osi czasu przykłądowyi danymi. 
+			W prawdzimym systemie tutaj wystąpiłaby pętla, przebiegająca po tablicy asocjacyjnej. 
+			*/
 			var id_1 = document.getElementById("canvas_A_1");
 			var content_A_1 = id_1.getContext("2d");
 			
@@ -189,12 +200,12 @@
 			
 			
 			
-			
+			//Kliknięcie przycisku "wstecz" 
 			$('#prev').click(function()
 			{
 				var margin_left = $('.right').css('margin-left').replace("px", "");
 				
-				if(margin_left < 300) 
+				if(margin_left < 300) //300 to wartość startowa, "wcześniejszych" terminów już nie ma 
 				{
 					$('.right').css('margin-left', (Number(margin_left) + 200) + "px");
 				}
@@ -202,12 +213,12 @@
 				return false;
 			});
 			
-			
+			//Kliknięcie przycisku "dalej" 
 			$('#next').click(function()
 			{
 				var margin_left = $('.right').css('margin-left').replace("px", "");
 				
-				if(margin_left > -3000) 
+				if(margin_left > -3000) //w tym przypadku "3000" to wartośc końcowa, "późniejszych" terminów już nie ma 
 				{
 					$('.right').css('margin-left', (margin_left - 200) + "px");
 				}
@@ -220,14 +231,21 @@
 		    {
 				if(e.which == 46 || e.which == 54 || e.which == 56) 
 				{
+					/*
+					Kliknięcie strzałki w górę lub w prawo na klawiaturze numerycznej, oraz kliknięcie znaku większości, powoduje wywołanie akcji jak podczas kliknięcia przycisku "dalej". 
+					*/
 					$('#next').click();
 				}
 				
 				else if(e.which == 44 || e.which == 50 || e.which == 52) 
 				{
+					/*
+					Kliknięcie strzałki w dół lub w lewo na klawiaturze numerycznej, oraz kliknięcie znaku mniejszości, powoduje wywołanie akcji jak podczas kliknięcia przycisku "wstecz". 
+					*/
 					$('#prev').click();
 				}
 			});
+
 			
 			
 		}); //koniec ready
