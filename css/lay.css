@@ -2,7 +2,9 @@ body {
   overflow: hidden; }
 
 .container-fluid {
-  min-width: 100%;
+  width: 100%;
+  width: 100%;
+  overflow: hidden;
   margin: 0px;
   padding: 0px; }
   .container-fluid .row {
@@ -58,7 +60,7 @@ body {
         box-sizing: border-box; }
       .container-fluid .row .col-md-12 .content {
         float: left;
-        min-width: 100%; }
+        width: 100%; }
         .container-fluid .row .col-md-12 .content .left {
           float: left;
           width: 300px; }

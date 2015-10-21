@@ -15,7 +15,9 @@ body
 
 .container-fluid
 {
-    min-width: 100%;
+    width: 100%;
+    width: 100%;
+    overflow: hidden;
     
     @include reset_margin_and_padding;
     
@@ -95,7 +97,7 @@ body
             .content
             {
                 float: left;
-                min-width: 100%;
+                width: 100%;
                 
                 .left
                 {
@@ -125,6 +127,7 @@ body
                     position: absolute;
                     z-index: -1;
                     margin-left: 300px;
+                    
                     
                     .time
                     {
